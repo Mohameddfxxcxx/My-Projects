@@ -1,0 +1,225 @@
+:root {
+  --bg-color: #545a5f;
+  --border-color: #37aa9c;
+  --accent-color: #1a1a1b;
+  --text-color: white;
+  --highlight-color: #94f3e4;
+  --fail: rgb(220, 53, 69, 0.5);
+  --fail-fill: rgb(220, 53, 69);
+  --success: rgb(40, 167, 69, 0.5);
+  --success-fill: rgb(40, 167, 69);
+  --shadow: 0.1;
+}
+
+/* light theme variables */
+/* :root {
+  --bg-color: #fff2f2;
+  --border-color: #f47c7c;
+  --accent-color: #fad4d4;
+  --text-color: #4b4b4b;
+  --highlight-color: #4b4b4b;
+  --fail: rgb(220, 53, 69, 0.5);
+  --fail-fill: rgb(220, 53, 69);
+  --success: rgb(40, 167, 69, 0.5);
+  --success-fill: rgb(40, 167, 69);
+  --shadow: 0.01;
+} */
+
+* {
+  -webkit-transition: all 0.4s ease;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------about---------------------------- */
+
+.about {
+  margin-bottom: 40px;
+  background-color: var(--accent-color);
+}
+
+.resource {
+  text-decoration: none;
+  color: var(--border-color) !important;
+  font-weight: 400;
+}
+
+/* ----------------------------cards---------------------------- */
+
+.card-shadow {
+  background-color: rgba(0, 0, 0, var(--shadow));
+  border: 5px solid var(--border-color);
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 40px 20px;
+  box-shadow: 5px 5px rgba(49, 49, 49, 0.349);
+}
+
+/* ----------------------------inputs---------------------------- */
+
+input {
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 6px;
+  height: 35px;
+  padding: 5px;
+  color: black;
+}
+
+.lhs-input {
+  width: 50px;
+  text-align: center;
+}
+
+.rhs-input {
+  width: 100px;
+}
+
+/* ----------------------------buttons---------------------------- */
+
+.transparent-button {
+  background-color: var(--accent-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.main-button {
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  font-size: larger;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.add-btn {
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  padding: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.example-btn {
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  margin: 5px 0px;
+  margin-right: 10px;
+}
+
+.delete {
+  fill: var(--fail-fill);
+  height: 2em;
+}
+
+/* ----------------------------test---------------------------- */
+
+.test-result {
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.test-success {
+  background-color: var(--success);
+}
+
+.test-fail {
+  background-color: var(--fail);
+}
+
+.error-msg {
+  background-color: var(--fail);
+  text-align: left;
+  border-radius: 6px;
+  padding: 20px 40px;
+  margin: 20px;
+}
+
+.success-text {
+  color: var(--success-fill);
+}
+
+.fail-text {
+  color: var(--fail-fill);
+}
+
+/* ----------------------------------------------------------- */
+
+#selectForm {
+  width: 40%;
+  margin: auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  padding: 0px 30px;
+}
+
+.highlighted {
+  color: var(--highlight-color);
+}
+
+.arrow {
+  font-size: 30px;
+  color: var(--border-color);
+}
+
+a {
+  color: var(--text-color);
+}
+
+svg {
+  margin-right: 8px;
+  margin-bottom: 2px;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-shadow:hover {
+    padding: 60px 50px;
+    box-shadow: 10px 10px rgba(49, 49, 49, 0.349);
+  }
+
+  .transparent-button:hover {
+    background-color: var(--border-color);
+    color: var(--bg-color);
+    font-size: larger;
+  }
+
+  .main-button:hover {
+    font-size: x-large;
+  }
+
+  .add-btn:hover {
+    filter: brightness(120%);
+  }
+
+  .example-btn:hover {
+    filter: brightness(120%);
+  }
+
+  .delete:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+  }
+
+  a:hover {
+    color: var(--highlight-color) !important;
+  }
+}
